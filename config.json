@@ -1,0 +1,9 @@
+{
+    "alphavantage_api_key": "YOUR_alphavantage_api_key",
+    "interval_to_check_prices_sec": 10,
+    "portfolio_path": "./portfolio.csv",
+    "storage": {
+        "path": "./storage.sqlite",
+        "table": "prices"
+    }
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Portfolio webapp</title>
+  </head>
+  <body>
+    <div class='heading'>
+      <h2>Portfolio</h2>
+      <div id='portfolio_fig' class='chart'></div>
+
+      <h2>Chart (only total)</h2>
+      <div id='chart_fig' class='chart'></div>
+
+      <h2>Chart (abs_prices)</h2>
+      <div id='chart_abs_prices_fig' class='chart'></div>      
+    </div>
+  </body>
+
+  <script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
+  <script>
+    const portfolio_fig_JSON = {{data['portfolio_fig_JSON'] | safe}};
+    Plotly.plot('portfolio_fig',portfolio_fig_JSON,{});chart_fig
+
+    const chart_fig_JSON = {{data['chart_fig_JSON'] | safe}};
+    Plotly.plot('chart_fig',chart_fig_JSON,{});
+
+    const chart_abs_prices_fig_JSON = {{data['chart_abs_prices_fig_JSON'] | safe}};
+    Plotly.plot('chart_abs_prices_fig',chart_abs_prices_fig_JSON,{});    
+    
+  </script>  
+</html>
